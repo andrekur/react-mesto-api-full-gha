@@ -7,7 +7,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.139.160
+IP 158.160.139.160
 
 Frontend https://andrekur.nomoredomainsmonster.ru
 
