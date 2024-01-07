@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.139.160
 
-Frontend https://...
+Frontend https://andrekur.nomoredomainsmonster.ru/
 
-Backend https://...
+Backend https://api.andrekur.nomoredomainsmonster.ru/
