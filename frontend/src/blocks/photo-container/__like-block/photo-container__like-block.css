@@ -1,0 +1,6 @@
+.photo-container__like-block {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 auto auto;
+  gap: 3px;
+}

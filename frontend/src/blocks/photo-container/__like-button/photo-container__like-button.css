@@ -1,0 +1,14 @@
+.photo-container__like-button {
+  padding: 0;
+  margin: 0 auto;
+  border: none;
+  width: 22px;
+  height: 19px;
+  background-color: #fff;
+  cursor: pointer;
+  background-image: url(../../../images/like/like.svg);
+}
+
+.photo-container__like-button:hover {
+  opacity: .6;
+}

@@ -1,0 +1,40 @@
+.page {
+  max-width: 1280px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 min(200px, 15.625%);
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+@media screen and (max-width: 1279px) {
+  .page {
+    padding: 0 min(80px, 15.625%);
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  .page {
+    padding: 0 min(60px, 15.625%);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .page {
+    padding: 0 min(40px, 15.625%);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .page {
+    padding: 0 min(19px, 15.625%);
+  }
+}
+
+@media screen and (max-width: 480px){
+  .page {
+    padding: 0;
+  }
+}

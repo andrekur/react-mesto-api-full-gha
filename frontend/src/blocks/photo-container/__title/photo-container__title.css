@@ -1,0 +1,10 @@
+.photo-container__title {
+  margin: auto 0;
+  max-width: 222px;
+  color: #000;
+  font-size: 24px;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

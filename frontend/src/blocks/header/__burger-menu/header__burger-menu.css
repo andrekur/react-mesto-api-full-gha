@@ -1,0 +1,15 @@
+.header__burger-menu {
+  padding: 0;
+  display: flex;
+  margin: 0 auto 40px;
+  flex-direction: column;
+  gap: 18px 0;
+  list-style: none;
+  text-align: center;
+}
+
+@media screen and (min-width: 581px) {
+  .header__burger-menu {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+.header__enter {
+  padding-top: 8px;
+  color: #FFF;
+  text-align: right;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 660px) {
+  .header__enter {
+    padding-right: 30px;
+  }
+}

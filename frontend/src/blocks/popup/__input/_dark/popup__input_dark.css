@@ -1,0 +1,11 @@
+.popup__input_dark {
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgba(204, 204, 204, 1);
+}

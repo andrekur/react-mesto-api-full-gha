@@ -1,0 +1,8 @@
+.photo-container__image {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0px 0px;
+  background: #C4C4C4;
+  object-position: center;
+  object-fit: cover;
+}
