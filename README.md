@@ -11,6 +11,7 @@
 
 IP-адрес 158.160.139.160
 
-Frontend https://andrekur.nomoredomainsmonster.ru/
+Frontend https://andrekur.nomoredomainsmonster.ru
 
-Backend https://api.andrekur.nomoredomainsmonster.ru/
+Backend https://api.andrekur.nomoredomainsmonster.ru
+
