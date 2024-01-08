@@ -6,8 +6,8 @@ import Header from "./Header";
 import Main from "./Main";
 
 
-
-import api from "../utils/Api"
+import { apiOptions } from '../utils/utils'
+import Api from "../utils/Api"
 import authApi from "../utils/authApi";
 import CurentUserContext from "../contexts/CurentUserContext"
 import ImagePopup from "./ImagePopup";
@@ -34,6 +34,7 @@ function App() {
   const [toDeleteCard, setToDeleteCard] = useState(null);
   const [curentUser, setCurentUser] = useState(null);
   const [cards, setCards] = useState([]);
+  const [api, setApi] = useState(null);
 
   const navigate = useNavigate();
 
@@ -106,11 +107,13 @@ function App() {
           return data
         })
         .then((data) => {
-          Promise.all([api.getUserPofile(), api.getAllCards()])
+          const _api = new Api(apiOptions, jwt)
+          Promise.all([_api.getUserPofile(), _api.getAllCards()])
             .then(([profileData, cardsData]) => {
-              setCurentUser({...profileData, email: data.email});
+              setCurentUser({...profileData, email: profileData.email});
               setCards(cardsData);
             })
+          setApi(_api)
         })
         .catch(console.error)
     };

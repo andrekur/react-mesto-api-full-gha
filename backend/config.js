@@ -2,7 +2,11 @@ DEFAULT_ALLOWED_METHODS = "GET,HEAD,PUT,PATCH,POST,DELETE";
 allowedCors = [
   'https://praktikum.tk',
   'http://praktikum.tk',
-  'localhost:3000'
+  'http://localhost:3000',
+  'http://localhost:3002',
+  'http://localhost:3001',
+  'https://api.andrekur.nomoredomainsmonster.ru',
+  'https://andrekur.nomoredomainsmonster.ru'
 ];
 
 const {

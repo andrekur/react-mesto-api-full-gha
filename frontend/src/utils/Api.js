@@ -1,9 +1,10 @@
-import {apiOptions} from './utils'
+
 
 
 class Api{
-  constructor({url, headers}) {
+  constructor({url, headers }, jwt) {
     this._url = url;
+    headers.authorization = `Bearer ${jwt}`
     this._headers = headers;
   };
 
@@ -82,7 +83,4 @@ class Api{
   }
 };
 
-
-export const api = new Api(apiOptions);
-
-export default api
+export default Api

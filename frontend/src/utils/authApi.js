@@ -1,4 +1,4 @@
-import { apiAuthOptions } from './utils'
+import { apiOptions } from './utils'
 
 
 class AuthApi{
@@ -45,6 +45,6 @@ class AuthApi{
   };
 }
 
-export const authApi = new AuthApi(apiAuthOptions);
+export const authApi = new AuthApi(apiOptions);
 
 export default authApi
