@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const auth = require('../middlewares/auth')
-const { HTTP_STATUS_NOT_FOUND  } = require('http2').constants;
+const { NotFoundError } = require('../errors/errors')
 
 router.use('/crash-test', () => {
   setTimeout(() => {
@@ -12,8 +12,8 @@ router.use('/cards', auth, require('./cards'))
 router.use('/users', auth, require('./users'))
 
 
-router.use('*', function(req, res) {
-  res.status(HTTP_STATUS_NOT_FOUND).send({message: 'URL not found'})
+router.use('*', function(req, res, next) {
+  next(new NotFoundError('URL not found'))
 });
 
 

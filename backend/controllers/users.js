@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const { SECRET_KEY } = require('../config').config
-const { ConflictReqiestError } = require('../errors/errors')
+const { ConflictError } = require('../errors/errors')
 const User = require('../models/user')
 const { HTTP_STATUS_CREATED } = require('http2').constants
 
@@ -54,7 +54,7 @@ module.exports.createUser = (req, res, next) => {
   User.findOne({email: req.body.email})
     .then((user) => {
       if (user) {
-        throw new ConflictReqiestError('Пользователь с такой почтой уже существует, необходимо указать другую');
+        throw new ConflictError('Пользователь с такой почтой уже существует, необходимо указать другую');
       }
 
       bcrypt.hash(req.body.password, 10)
