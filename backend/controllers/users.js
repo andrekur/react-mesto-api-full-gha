@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const { SECRET_KEY } = require('../config').config
-const { UnauthorizedError, ConflictReqiestError } = require('../errors/errors')
+const { ConflictReqiestError } = require('../errors/errors')
 const User = require('../models/user')
 const { HTTP_STATUS_CREATED } = require('http2').constants
 
@@ -88,5 +88,5 @@ module.exports.login = (req, res, next) => {
         token: jwt.sign({ _id: user._id }, SECRET_KEY, { expiresIn: '7d' }),
       });
     })
-    .catch((err) => next(new UnauthorizedError(err)))
+    .catch(next)
 };
