@@ -1,3 +1,9 @@
+DEFAULT_ALLOWED_METHODS = "GET,HEAD,PUT,PATCH,POST,DELETE";
+allowedCors = [
+  'https://praktikum.tk',
+  'http://praktikum.tk',
+  'localhost:3000'
+];
 
 const {
   PORT = 3000,
@@ -8,5 +14,5 @@ const {
 } = process.env;
 
 module.exports.config = {
-  PORT, SECRET_KEY, DB_NAME, DB_HOST, DB_PORT
+  PORT, SECRET_KEY, DB_NAME, DB_HOST, DB_PORT, allowedCors, DEFAULT_ALLOWED_METHODS
 }
