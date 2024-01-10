@@ -13,13 +13,13 @@ module.exports.getUsers = (req, res, next) => {
 }
 
 module.exports.getUser = (req, res, next) => {
-  User.findById(req.params.userId).orFail()
+  findUserOrFail(req.params.userId)
     .then(user => res.send(user))
     .catch(next)
 }
 
 module.exports.getSeltUser = (req, res, next) => {
-  User.findById(req.user._id).orFail()
+  findUserOrFail(req.user._id)
     .then(user => res.send({
       _id: user._id,
       email: user.email,
@@ -48,6 +48,10 @@ const updateUserData = (userId, updateData) => {
     new: true,
     runValidators: true,
   }).orFail()
+}
+
+const findUserOrFail = (userId) => {
+  return User.findById(userId).orFail()
 }
 
 module.exports.createUser = (req, res, next) => {
